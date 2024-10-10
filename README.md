@@ -6,7 +6,7 @@
 https://text-editor-pwa-eu0g.onrender.com/
 
 ## Screenshot of deployed application
-
+![Screenshot](/Assets/image.png)
 
 ## Description
 The motivation for the project was for the developer to demonstrate his abilities to build a PWA

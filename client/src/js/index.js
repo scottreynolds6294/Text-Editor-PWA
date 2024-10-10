@@ -2,7 +2,6 @@ import { Workbox } from 'workbox-window';
 import Editor from './editor';
 import './database';
 import '../css/style.css';
-import { header } from './header';
 
 const main = document.querySelector('#main');
 main.innerHTML = '';
@@ -18,16 +17,6 @@ const loadSpinner = () => {
   `;
   main.appendChild(spinner);
   
-};
-
-const displayHeader = () => {
-  const headerElement = document.createElement('pre');
-  headerElement.textContent = header;
-  headerElement.style.fontFamily = 'monospace'; 
-  headerElement.style.margin = '0'; 
-  headerElement.style.padding = '20px'; 
-  headerElement.style.whiteSpace = 'pre-wrap'; 
-  main.appendChild(headerElement);
 };
 
 // Initialize editor
