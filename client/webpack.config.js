@@ -8,7 +8,7 @@ module.exports = () => {
     mode: 'development',
     entry: {
       main: './src/js/index.js',
-      install: './src/js/install.js'
+      install: './src/js/install.js',
     },
     output: {
       filename: '[name].bundle.js',
@@ -49,16 +49,16 @@ module.exports = () => {
       rules: [
         {
           test: /\.css$/i,
-          use: ['styler-loader', 'css-loader'],
+          use: ['style-loader', 'css-loader'],
         },
         {
           test: /\.m?js$/,
-          exclude: /node_modules/,
+          exclude: /node_modules|src-sw\.js$/,
           use: {
             loader: 'babel-loader',
             options: {
-              presets: ['@babel/preset/env'],
-              plugins: [ '@babel/plugin-proposal-onject-rest-spread', '@babel/transform-runtime'],
+              presets: ['@babel/preset-env'],
+              plugins: [ '@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime'],
             },
           },
         },
